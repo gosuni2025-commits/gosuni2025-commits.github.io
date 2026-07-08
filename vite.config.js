@@ -11,6 +11,8 @@ export default defineConfig({
                 terms: resolve(__dirname, 'terms.html'),
                 support: resolve(__dirname, 'support.html'),
                 brand: resolve(__dirname, 'brand.html'),
+                zombie: resolve(__dirname, 'zombie-defense.html'),
+                manualRiceSorting: resolve(__dirname, 'manual-rice-sorting.html'),
             },
         },
     },

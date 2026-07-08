@@ -13,10 +13,18 @@
   </script>
   <meta name="google-adsense-account" content="ca-pub-7168957163160987">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7168957163160987" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/png" href="/assets/logo-white-bg.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>개인정보 처리방침 - Zombie Defense</title>
-  <meta name="description" content="Zombie Defense 게임의 개인정보 처리방침입니다.">
+  <title>개인정보 처리방침 - Gosuni2025</title>
+  <meta name="description" content="Gosuni2025에서 제공하는 앱과 게임의 개인정보 처리방침입니다.">
+  <link rel="canonical" href="https://gosuni.com/privacy.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gosuni2025" />
+  <meta property="og:title" content="개인정보 처리방침 - Gosuni2025" />
+  <meta property="og:description" content="Gosuni2025에서 제공하는 앱과 게임의 개인정보 처리방침입니다." />
+  <meta property="og:url" content="https://gosuni.com/privacy.html" />
+  <meta property="og:image" content="https://gosuni.com/assets/logo-white-bg.png" />
+  <meta name="twitter:card" content="summary" />
   <style>
     :root {
       --primary-color: #1a1a2e;
@@ -376,23 +384,34 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/src/subpage-theme.css" />
 </head>
 
-<body data-page="privacy">
+<body data-page="privacy" data-theme="gosuni-doc">
   <header class="header">
     <div class="header-content">
-      <a href="/" class="logo">Zombie Defense</a>
-      <a href="/" class="back-link" data-i18n="common.backHome">← 홈으로</a>
+      <a href="/" class="logo" aria-label="Gosuni2025 Home">
+        <img src="/assets/logo-transparent-white.png" alt="Gosuni2025" class="logo-img">
+      </a>
+      <div class="header-links">
+        <a href="/#apps" data-i18n="home.nav.apps">앱</a>
+        <a href="/#about-gosuni" data-i18n="common.about">소개</a>
+        <a href="/support.html" data-i18n="common.support">고객센터</a>
+        <a href="/privacy.html" data-i18n="common.privacy">개인정보 처리방침</a>
+        <a href="/terms.html" data-i18n="common.terms">서비스 이용약관</a>
+        <a href="/brand.html" data-i18n="common.brand">브랜드</a>
+        <a href="/#apps" class="btn-download-nav" data-i18n="home.nav.explore">둘러보기</a>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <div class="title-section">
-      <p class="game-name">🎮 Zombie Defense</p>
+      <p class="game-name">Gosuni2025 Services</p>
       <h1>개인정보 처리방침</h1>
-      <span class="effective-date">📅 시행일: 2025년 12월 1일</span>
+      <span class="effective-date">시행일: 2026년 7월 7일</span>
       <p class="intro-text">
-        고순이(이하 "회사")는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 
+        고순이2025(이하 "회사")는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고
         이와 관련한 고충을 신속하게 처리하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
       </p>
     </div>
@@ -400,10 +419,20 @@
     <section>
       <h2>1. 수집하는 개인정보 항목</h2>
       <div class="info-box">
-        <p><strong>📱 로컬 저장 방식</strong></p>
-        <p>본 게임은 서버를 운영하지 않으며, 게임 데이터는 사용자 기기에 로컬 저장됩니다.</p>
+        <p><strong>서비스별 저장 방식</strong></p>
+        <p>Gosuni2025의 앱과 게임은 서비스 성격에 따라 로컬 저장 또는 온라인 기능용 서버 저장 방식을 사용합니다.</p>
       </div>
-      <p>단, 아래 제3자 서비스를 통해 다음 정보가 수집될 수 있습니다:</p>
+      <p>서비스 제공, 광고 표시, 사용성 개선, 온라인 플레이 제공을 위해 서비스별로 아래 정보가 처리될 수 있습니다:</p>
+
+      <h3>온라인 게임 서비스 (대국전열: 오토 배틀러)</h3>
+      <ul>
+        <li>게스트 플레이어 ID, 선택적으로 연결한 계정 ID</li>
+        <li>비밀번호 원문이 아닌 비밀번호 검증용 해시와 솔트</li>
+        <li>로그인 토큰의 해시, 세션 생성 및 마지막 사용 시각</li>
+        <li>프로필 이름, 프로필 아이콘, 덱 및 진형 스냅샷</li>
+        <li>비동기 상대 매칭, 전투 결과, 순위 및 플레이 기록</li>
+        <li>서버 요청 처리 과정에서 발생하는 IP 주소, 기기 및 네트워크 정보</li>
+      </ul>
 
       <h3>광고 서비스 (Unity Ads)</h3>
       <ul>
@@ -442,15 +471,19 @@
           <tbody>
             <tr>
               <td>Unity Ads</td>
-              <td>무료 게임 제공을 위한 광고 수익</td>
+              <td>무료 앱과 게임 제공을 위한 광고 표시 및 수익 정산</td>
             </tr>
             <tr>
               <td>Google AdMob</td>
-              <td>무료 게임 제공을 위한 광고 수익</td>
+              <td>무료 앱과 게임 제공을 위한 광고 표시 및 수익 정산</td>
             </tr>
             <tr>
               <td>Firebase Analytics</td>
-              <td>서비스 개선 및 통계 분석</td>
+              <td>서비스 개선, 오류 파악 및 통계 분석</td>
+            </tr>
+            <tr>
+              <td>Gosuni2025 온라인 게임 서버</td>
+              <td>게스트 인증, 선택 계정 연결, 비동기 PvP, 덱 저장, 순위 및 플레이 기록 제공</td>
             </tr>
           </tbody>
         </table>
@@ -460,12 +493,13 @@
     <section>
       <h2>3. 개인정보 보유 및 이용 기간</h2>
       <div class="info-box">
-        <p>회사는 직접 개인정보를 저장하지 않습니다.</p>
+        <p>로컬 저장형 앱의 데이터는 주로 사용자 기기에 저장됩니다. 온라인 기능이 있는 앱의 서버 데이터는 서비스 제공 기간 동안 보관하며, 앱 내 삭제 기능 또는 고객센터 요청을 통해 삭제할 수 있습니다.</p>
       </div>
       <p>제3자 서비스의 보유 기간은 각 서비스의 정책을 따릅니다:</p>
       <ul class="external-links">
         <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity 개인정보 처리방침</a></li>
         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google/Firebase/AdMob 개인정보 처리방침</a></li>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare 개인정보 처리방침</a></li>
       </ul>
     </section>
 
@@ -495,6 +529,11 @@
               <td>Google (Firebase)</td>
               <td>기기정보, 앱 사용통계</td>
               <td>서비스 분석</td>
+            </tr>
+            <tr>
+              <td>Cloudflare</td>
+              <td>온라인 게임 요청, IP 주소, 서버 처리 로그, 게임 진행 데이터</td>
+              <td>Gosuni2025 온라인 게임 서버 호스팅, 보안, 네트워크 제공</td>
             </tr>
           </tbody>
         </table>
@@ -528,12 +567,14 @@
   </main>
 
   <footer class="footer">
-    <p data-i18n="common.zombieRights">&copy; 2025 Zombie Defense Team. All rights reserved.</p>
-    <div>
+    <p data-i18n="common.gosuniRights">&copy; 2025 Gosuni2025. All rights reserved.</p>
+    <div class="footer-links">
       <a href="/" data-i18n="common.home">홈</a>
+      <a href="/#about-gosuni" data-i18n="common.about">소개</a>
       <a href="/support.html" data-i18n="common.support">고객센터</a>
       <a href="/privacy.html" data-i18n="common.privacy">개인정보 처리방침</a>
       <a href="/terms.html" data-i18n="common.terms">서비스 이용약관</a>
+      <a href="/brand.html" data-i18n="common.brand">브랜드</a>
     </div>
   </footer>
   <script type="module" src="/src/main.js"></script>
