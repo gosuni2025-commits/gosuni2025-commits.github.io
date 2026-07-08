@@ -13,6 +13,7 @@ export default defineConfig({
                 brand: resolve(__dirname, 'brand.html'),
                 zombie: resolve(__dirname, 'zombie-defense.html'),
                 manualRiceSorting: resolve(__dirname, 'manual-rice-sorting.html'),
+                taikyokuBattleline: resolve(__dirname, 'taikyoku-battleline.html'),
             },
         },
     },

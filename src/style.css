@@ -36,6 +36,10 @@ body[data-page="manual"] {
   --primary-color: var(--rice-color);
 }
 
+body[data-page="taikyoku"] {
+  --primary-color: #4ddbd1;
+}
+
 body[data-page="index"] {
   background:
     linear-gradient(90deg, rgba(123, 214, 194, 0.03) 1px, transparent 1px),
@@ -202,8 +206,8 @@ h1 {
   position: relative;
   min-height: 560px;
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -227,15 +231,20 @@ h1 {
 }
 
 .showcase-tile--manual {
-  grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1;
   border-color: rgba(239, 217, 145, 0.34);
 }
 
-.showcase-tile--zombie {
+.showcase-tile--taikyoku {
   grid-column: 2;
   grid-row: 1 / 3;
-  margin-top: 4.5rem;
-  margin-bottom: 4.5rem;
+  border-color: rgba(77, 219, 209, 0.36);
+}
+
+.showcase-tile--zombie {
+  grid-column: 1;
+  grid-row: 2;
   border-color: rgba(255, 59, 59, 0.28);
 }
 
@@ -255,6 +264,10 @@ h1 {
 
 .showcase-tile--zombie img {
   object-position: center;
+}
+
+.showcase-tile--taikyoku img {
+  object-position: center top;
 }
 
 .showcase-tile::after {
@@ -280,6 +293,10 @@ h1 {
   color: #ff6d6d;
 }
 
+.showcase-tile--taikyoku .showcase-tile__meta {
+  color: #5de5db;
+}
+
 .showcase-tile__title {
   color: #fff;
   font-size: clamp(1.65rem, 3vw, 2.45rem);
@@ -287,9 +304,15 @@ h1 {
   line-height: 1;
 }
 
+.showcase-tile--taikyoku .showcase-tile__title {
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem);
+  line-height: 1.05;
+  word-break: keep-all;
+}
+
 .showcase-rule {
   position: absolute;
-  left: 34%;
+  left: 41.5%;
   top: 0;
   bottom: 0;
   display: flex;
@@ -311,7 +334,7 @@ h1 {
   bottom: 4rem;
   left: 50%;
   width: 1px;
-  background: linear-gradient(var(--rice-color), #ff3b3b);
+  background: linear-gradient(var(--rice-color), #4ddbd1, #ff3b3b);
   opacity: 0.55;
 }
 
@@ -501,6 +524,23 @@ h1 {
     #0a0a0a;
 }
 
+.app-card--taikyoku {
+  grid-column: 1 / -1;
+  border-color: rgba(77, 219, 209, 0.42);
+  background:
+    linear-gradient(135deg, rgba(77, 219, 209, 0.12), transparent 40%),
+    linear-gradient(315deg, rgba(223, 184, 91, 0.12), transparent 42%),
+    #08100f;
+}
+
+.app-card--taikyoku .app-status {
+  color: #64e7df;
+}
+
+.app-card--taikyoku .app-card__media img {
+  object-position: center top;
+}
+
 .app-card--zombie {
   border-color: rgba(255, 59, 59, 0.28);
 }
@@ -639,6 +679,21 @@ h1 {
     #0b0a08;
 }
 
+.taikyoku-hero {
+  background:
+    radial-gradient(circle at 18% 25%, rgba(77, 219, 209, 0.20), transparent 34%),
+    radial-gradient(circle at 78% 50%, rgba(223, 184, 91, 0.16), transparent 38%),
+    linear-gradient(180deg, rgba(9, 19, 21, 0.98), rgba(5, 8, 10, 0.98));
+}
+
+.taikyoku-hero h1 {
+  word-break: keep-all;
+}
+
+.taikyoku-hero .game-hero__layout {
+  grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.6fr);
+}
+
 .game-hero__media {
   min-height: 460px;
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -686,6 +741,16 @@ h1 {
   background: rgba(247, 240, 220, 0.08);
 }
 
+.game-hero__media--taikyoku {
+  height: clamp(520px, 68vh, 680px);
+  min-height: 0;
+  padding: 1rem;
+  border-color: rgba(77, 219, 209, 0.26);
+  background:
+    linear-gradient(180deg, rgba(77, 219, 209, 0.10), transparent 38%),
+    rgba(6, 13, 15, 0.94);
+}
+
 .phone-shot {
   width: 100%;
   height: 100%;
@@ -698,6 +763,31 @@ h1 {
 .media-section {
   padding: 5rem 2rem;
   background: #101010;
+}
+
+.screenshot-section {
+  background:
+    linear-gradient(180deg, rgba(77, 219, 209, 0.055), transparent 24%),
+    #101010;
+}
+
+.screenshot-pair {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.screenshot-pair img {
+  width: 100%;
+  max-height: 720px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid rgba(77, 219, 209, 0.26);
+  border-radius: 8px;
+  background: #060d0f;
 }
 
 .video-frame {
@@ -735,6 +825,7 @@ h2 {
 #about,
 #about-gosuni,
 #video,
+#screenshots,
 #gameplay-notes,
 #download {
   scroll-margin-top: 5.5rem;
@@ -798,6 +889,12 @@ h2 {
   background:
     linear-gradient(135deg, rgba(255, 59, 59, 0.08), transparent 42%),
     #0d0e0c;
+}
+
+.detail-notes--taikyoku {
+  background:
+    linear-gradient(135deg, rgba(77, 219, 209, 0.09), transparent 42%),
+    #0b1111;
 }
 
 .publisher-grid,
@@ -984,6 +1081,7 @@ footer {
   #about,
   #about-gosuni,
   #video,
+  #screenshots,
   #gameplay-notes,
   #download {
     scroll-margin-top: 4.5rem;
@@ -1001,6 +1099,7 @@ footer {
 
   .showcase-tile,
   .showcase-tile--manual,
+  .showcase-tile--taikyoku,
   .showcase-tile--zombie {
     grid-column: auto;
     grid-row: auto;
@@ -1031,6 +1130,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .taikyoku-hero .game-hero__layout {
+    grid-template-columns: 1fr;
+  }
+
   .game-hero .hero-content {
     text-align: center;
   }
@@ -1043,9 +1146,17 @@ footer {
     min-height: 360px;
   }
 
+  .game-hero__media--taikyoku {
+    height: 520px;
+  }
+
   .app-card {
     min-height: 0;
     grid-template-columns: 1fr;
+  }
+
+  .app-card--taikyoku {
+    grid-column: auto;
   }
 
   .app-card__media {
@@ -1054,6 +1165,10 @@ footer {
 
   .app-card__media--mark {
     min-height: 190px;
+  }
+
+  .screenshot-pair {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1074,6 +1189,10 @@ footer {
     height: 44px;
   }
 
+  .taikyoku-hero h1 {
+    font-size: 2.05rem;
+  }
+
   .app-card {
     padding: 1rem;
   }
@@ -1084,6 +1203,10 @@ footer {
 
   .game-hero__media {
     min-height: 300px;
+  }
+
+  .game-hero__media--taikyoku {
+    height: 440px;
   }
 }
 
