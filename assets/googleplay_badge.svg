@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" width="135" height="40">
+  <rect width="135" height="40" rx="5" fill="#000"/>
+  <rect x="0.5" y="0.5" width="134" height="39" rx="4.5" stroke="#a6a6a6" fill="none"/>
+  <path d="M16.2 8.4c-.5.3-.8.9-.8 1.7v19.8c0 .8.3 1.4.8 1.7l10.9-11.6L16.2 8.4z" fill="#36c5f0"/>
+  <path d="M30.6 16.2 27.1 20l3.5 3.8 4.8-2.7c1.5-.8 1.5-2.2 0-3l-4.8-1.9z" fill="#f7c844"/>
+  <path d="m16.2 8.4 10.9 11.6 3.5-3.8L18.8 9.5c-1-.6-1.9-1-2.6-1.1z" fill="#39d98a"/>
+  <path d="M16.2 31.6c.7-.1 1.6-.5 2.6-1.1l11.8-6.7-3.5-3.8-10.9 11.6z" fill="#ff5f57"/>
+  <text x="45" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#fff">Download on</text>
+  <text x="45" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#fff">Google Play</text>
+</svg>
